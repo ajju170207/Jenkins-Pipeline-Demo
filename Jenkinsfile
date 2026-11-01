@@ -1,3 +1,4 @@
+
 pipeline {
     agent any
 
@@ -14,14 +15,14 @@ pipeline {
 
         stage('Verify Tools') {
             steps {
-                bat 'git --version'
-                bat 'python --version'
+                sh 'git --version'
+                sh 'python3 --version'
             }
         }
 
         stage('Python Syntax Check') {
             steps {
-                bat 'python -m py_compile program1.py'
+                sh 'python3 -m py_compile program1.py'
             }
         }
 
