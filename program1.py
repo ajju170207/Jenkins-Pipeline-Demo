@@ -1,2 +1,4 @@
-number = int(input("Enter a number: "))
-print("Square:", number ** 2)
+num = 5
+
+for i in range(1, 11):
+    print(num, "x", i, "=", num * i)
